@@ -1,0 +1,32 @@
+<td><span id="cloud_pct7"></span></td>
+                            <td> <span id="temp7"></span></td>
+                            <td><span id="feels_like7"></span></td>
+                            <td><span id="humidity7"></span></td>
+                            <td><span id="min_temp7"></span></td>
+                            <td><span id="max_temp7"></span></td>
+                            <td><span id="wind_speed7"></span></td>
+                            <td><span id="wind_degrees7"></span></td>
+                            <td><span id="sunrise7"></span></td>
+                            <td><span id="sunset7"></span></td>
+
+
+
+                             fetch('https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=sydney', options)
+    .then(response => response.json())
+    .then(response => {
+        console.log(response);
+        cloud_pct7.innerHTML = response.cloud_pct;
+        temp7.innerHTML = response.temp;
+        //temp2.innerHTML = response.temp;
+
+        feels_like7.innerHTML = response.feels_like;
+        humidity7.innerHTML = response.humidity;
+        //humidity2.innerHTML = response.humidity;
+        min_temp7.innerHTML = response.min_temp;
+        max_temp7.innerHTML = response.max_temp;
+        wind_speed7.innerHTML = response.wind_speed;
+        // wind_speed2.innerHTML = response.wind_speed;
+        wind_degrees7.innerHTML = response.wind_degrees;
+        sunrise7.innerHTML = response.sunrise;
+        sunset7.innerHTML = response.sunset;
+    });
